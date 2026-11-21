@@ -9,12 +9,12 @@ services:
       dockerfile: 2_03-10/backend/Dockerfile.backend
     environment:
       REDIS_HOST: redis
-      POSTGRES_HOST: psql_db
+      POSTGRES_HOST: db
       POSTGRES_USER: randalfd
       POSTGRES_PASSWORD: password
       POSTGRES_DATABASE: psql_db_docker
     depends_on:
-      - psql_db
+      - db
   redis:
     image: redis:8.12-rc3-alpine3.23
   db:
