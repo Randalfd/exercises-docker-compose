@@ -6,7 +6,7 @@ COPY example-app/frontend .
 
 EXPOSE 5001
 
-ENV REACT_APP_BACKEND_URL=http://localhost:8080
+ENV REACT_APP_BACKEND_URL=http://localhost:8000/api/
 
 RUN apt-get update
 RUN apt-get install -y curl ca-certificates

@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 COPY example-app/backend .
 EXPOSE 8080
 
-ENV REQUEST_ORIGIN=http://localhost:5001
+ENV REQUEST_ORIGIN=http://localhost:8000
 
 RUN go version
 RUN go build
