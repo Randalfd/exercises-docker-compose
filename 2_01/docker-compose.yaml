@@ -1,0 +1,6 @@
+services:
+  simple-web-service:
+    image: devopsdockeruh/simple-web-service:ubuntu
+    volumes:
+      - ./log.txt:/usr/src/app/text.log:Z
+    container_name: simple-web-service

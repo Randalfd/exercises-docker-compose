@@ -1,0 +1,18 @@
+FROM golang:1.27
+
+WORKDIR /usr/src/app
+
+# use here COPY 1_13 .
+COPY example-app/backend .
+EXPOSE 8080
+
+ENV REQUEST_ORIGIN=http://localhost:5001
+
+RUN go version
+RUN go build
+
+RUN go test ./
+
+ENV PORT=8080
+
+CMD ["./server"]
